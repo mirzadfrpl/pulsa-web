@@ -1,0 +1,117 @@
+/* From Uiverse.io by satyamchaudharydev */ 
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+    border: none;
+    background: none;
+    color: #8b8ba7;
+  }
+  /* styling of whole input container */
+.form {
+    --timing: 0.3s;
+    --width-of-input: 200px;
+    --height-of-input: 40px;
+    --border-height: 2px;
+    --input-bg: #fff;
+    --border-color: #22C55D;
+    --border-radius: 30px;
+    --after-border-radius: 1px;
+    position: relative;
+    width: var(--width-of-input);
+    height: var(--height-of-input);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    padding-inline: 0.8em;
+    border-radius: var(--border-radius);
+    transition: border-radius 0.5s ease;
+    background: var(--input-bg,#fff);
+    margin: 0 auto; /* Center the search bar */
+    outline: 2px solid var(--border-color); /* Add outline */
+}
+  /* styling of Input */
+  .input {
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+  }
+  
+  .form:before {
+    content: "";
+    position: absolute;
+    background: var(--border-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    width: 100%;
+    height: var(--border-height);
+    left: 0;
+    bottom: 0;
+    border-radius: 1px;
+    transition: transform var(--timing) ease;
+  }
+
+  .form:focus-within {
+    border-radius: var(--after-border-radius);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+
+  .form:focus-within:before {
+    transform: scale(1);
+  }
+
+  .reset {
+    border: none;
+    background: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+ 
+  input:not(:placeholder-shown) ~ .reset {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .form svg {
+    width: 17px;
+    margin-top: 3px;
+  }
+
+  .slider {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    white-space: nowrap;
+  }
+  
+  .slide-container {
+    display: flex;
+    positiona: absolute;
+    left: 100vw;
+    width: max-content;
+    animation: slideLoop 30s linear infinite;
+  }
+  
+  .slide-container img {
+    width: 100vw;
+    flex-shrink: 0;
+  }
+  
+@keyframes slideLoop {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+  
+
+  
