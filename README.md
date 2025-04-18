@@ -26,5 +26,8 @@ A minimal yet functional **mobile credit (pulsa) ordering platform**, built usin
 
 ---
 
-## 📦 Folder Structure
+## 🎬 Demo Video
+
+[▶️ Click to watch demo](https://raw.githubusercontent.com/mirzadfrpl/pulsa-web/main/Screen%20Recording%202025-04-18%20at%2011.17.46.mov)
+
 
